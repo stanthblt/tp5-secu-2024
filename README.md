@@ -47,6 +47,9 @@ PORT      STATE SERVICE
 🌞 **Injecter du code serveur**
 
 ```bash
+stan@Stanislass-MacBook-Pro-2 tp5-secu-2024 % python3 client.py
+command : ls
+'afs\nbin\nboot\ndev\netc\nhome\nlib\nlib64\nmedia\nmnt\nopt\nproc\nroot\nrun\nsbin\nsrv\nsys\ntmp\nusr\nvar\n'
 ```
 
 ## 3. Reverse shell
