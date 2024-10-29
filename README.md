@@ -57,6 +57,10 @@ command : ls
 🌞 **Obtenez un reverse shell sur le serveur**
 
 ```bash
+stan@Stanislass-MacBook-Pro-2 ~ % nc -lv 1111
+bash: cannot set terminal process group (1229): Inappropriate ioctl for device
+bash: no job control in this shell
+[root@localhost /]# 
 ```
 
 🌞 **Pwn**
@@ -184,12 +188,3 @@ WantedBy=multi-user.target
 [server_fixed.py](./server_fixed.py)
 
 [client_fixed.py](./client_fixed.py)
-
-🌞 **Proposer une remédiation système**
-
-- l'environnement dans lequel tourne le service est foireux (le user utilisé ?)
-- la machine devrait bloquer les connexions sortantes (pas de reverse shell possible)
-- **vous devez donc proposer une suite d'étapes pour empêcher l'exploitation**
-  - l'app vulnérable doit fonctionner
-  - mais l'exploitation que vous avez utilisé doit être impossible
-  - c'est un des jobs de l'admin (et du mec de sécu qui fait des recommandations aux admins) : héberger des apps vulnérables, mais empêcher l'exploitation
